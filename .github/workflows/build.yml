@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Run tests with coverage
-        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI --code-coverage
+        run: ng test --no-watch --no-progress --browsers=ChromeHeadlessCI --code-coverage
 
       - uses: sonarsource/sonarqube-scan-action@master
         with:
