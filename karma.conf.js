@@ -26,13 +26,13 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessCI'],
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox', '--disable-gpu', '--disable-translate', '--disable-extensions', '--remote-debugging-port=9222']
       }
     },
-    browsers: ['ChromeHeadlessCI'],
     singleRun: true,
     restartOnFileChange: true
   });
